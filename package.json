@@ -1,0 +1,28 @@
+{
+  "name": "cMama",
+  "version": "1.0.0",
+  "description": "online menu ordering site for a bakery/luncheonette",
+  "engines": {
+    "node": "6.9.4"
+  },
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Mollert/RobotSizing"
+  },
+  "author": "David Mollert",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.6",
+    "express-validator": "^4.3.0",
+    "path": "^0.12.7",
+    "request": "^2.83.0"
+  }
+}

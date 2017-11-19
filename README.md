@@ -1,2 +1,1 @@
-# cMama
-An example of online ordering
+Developed an online menu ordering site for a bakery/luncheon place.
