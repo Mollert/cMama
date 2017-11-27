@@ -1,3 +1,49 @@
 
+/* Header  */
+.head {
+	padding: 50px 0 10px 0;
+	background-image: url("../../assets/image/bakeryBanner.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+	
+.headTitle {
+	font-family: 'Courgette', cursive;
+	font-size: 80px;
+	color: yellow;
+	padding-left: 30px;
+}
 
+.formLink {
+	display: inline-block;
+	margin-top: 70px;
+	margin-left: 60px;
+}
+	
+.link {
+	font-size: 26px;
+	color: yellow;
+}
+	
+.link:hover {
+	color: red;
+}
 
+/* Login Page */
+		
+.login {
+	background-color: #DEB887;	
+	font-size: 24px;
+	font-weight: bold;
+	padding: 20px 100px 20px 60px;
+}
+		
+.loginTitle {
+	text-decoration: underline;
+	margin-top: 0px;
+	margin-bottom: 20px;
+}
+		
+.btn {
+	margin-bottom: 20px;
+}
