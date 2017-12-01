@@ -21,7 +21,6 @@ app.set("view engine", "handlebars");
 app.set("views", path.join(__dirname ,"views"));
 
 var routes = require("./controllers/cMama-controller.js");
-var routes = require("./controllers/links-controller.js");
 
 app.use("/", routes);
 

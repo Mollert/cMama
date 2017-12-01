@@ -1,7 +1,81 @@
 
-{{>header-lunch}}
+<header class="head">
+	<div class="headTitle">Cool Mama's Bakery</div>
+	<form class="formLink" action={{navagate.homeLocation}} method="GET">
+		<a id="home" class="link" href={{navagate.homeLocation}}>{{navagate.whereHome}}</a>
+	</form>
+	<form class="formLink" action={{navagate.bakeryLocation}} method="GET">
+		<a id="bakery" class="link" href={{navagate.bakeryLocation}}>{{navagate.whereBakery}}</a>
+	</form>
+	<form class="formLink" action={{navagate.loginLocation}} method="GET">
+		<a id="login" class="link" href={{navagate.loginLocation}}>{{navagate.whereLogin}}</a>
+	</form>	
+</header>
 
-<div class="container">
-	<div class="test">This is the Lunch Page</div>
+<div class="container-fluid">
+	<div class="row">
+		<div class="menuTitle">Choose from these hand made sandwiches with the finest ingredients.</div>
+	</div>
+	<div class="row">
+		<div class="col-10">
+			{{#each sandwich}}
+				<ul>
+					<li>
+						<div class="row">
+							<div class="col-3">
+								<img class="img-left" src={{sandPic}} alt="Sandwich" style="height:auto; width:100%;"/>
+							</div>
+							<div class="col-7">					
+								<div class="sandwich">
+									<p class="sandwichName">{{name}}</p>
+									<p class="sandwichDescribe">{{description}}</p>
+									<p>{{emphasis}}</p>
+								</div>
+							</div>
+							<div class="col-2">
+								<div class="cost">${{cost}}</div>
+								<div class="qty">Quantity</div>
+								<form>
+									<div class="form-group">
+										<input type="text" class="form-control" placeholder="QTY">
+									</div>
+								</form>
+							</div>
+						</div>
+					</li>
+				</ul>
+			{{/each}}
+		</div>		
+		<div class="col-2">
+			{{#each side}}
+				<ul>
+					<li>
+						<img class="img-left" src={{sidePic}} style="height:auto; width:60%;"/>
+						<div class="sideName">{{name}}</div>
+						<div class="cost">${{cost}}</div>
+						<form>
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="QTY">
+							</div>
+						</form>
+					</li>				
+				</ul>
+			{{/each}}
+			{{#each drink}}
+				<ul>
+					<li>
+						<img class="img-left" src={{drinkPic}} style="height:auto; width:60%;"/>
+						<div class="sideName">{{name}}</div>
+						<div class="cost">${{cost}}</div>
+						<form>
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="QTY">
+							</div>
+						</form>
+					</li>				
+				</ul>
+			{{/each}}			
+		</div>
+	</div>
 </div>
 

@@ -1,5 +1,16 @@
 
-{{>header-home}}
+<header class="head">
+	<div class="headTitle">Cool Mama's Bakery</div>
+	<form class="formLink" action={{navagate.bakeryLocation}} method="GET">
+		<a id="bakery" class="link" href={{navagate.bakeryLocation}}>{{navagate.whereBakery}}</a>
+	</form>
+	<form class="formLink" action={{navagate.lunchLocation}} method="GET">
+		<a id="lunch" class="link" href={{navagate.lunchLocation}}>{{navagate.whereLunch}}</a>
+	</form>
+	<form class="formLink" action={{navagate.loginLocation}} method="GET">
+		<a id="login" class="link" href={{navagate.loginLocation}}>{{navagate.whereLogin}}</a>
+	</form>	
+</header>
 
 <div class="container">
 	<div class="test">This is the Home Page</div>

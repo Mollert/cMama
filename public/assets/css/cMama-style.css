@@ -29,8 +29,13 @@
 	color: red;
 }
 
-/* Login Page */
-		
+/* Lunch Page */
+ul {
+	list-style: none;
+	padding-left: 0px;
+}
+
+/* Login Page */		
 .login {
 	background-color: #DEB887;	
 	font-size: 24px;

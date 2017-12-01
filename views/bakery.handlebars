@@ -1,7 +1,47 @@
 
-{{>header-bakery}}
+<header class="head">
+	<div class="headTitle">Cool Mama's Bakery</div>		
+	<form class="formLink" action={{navagate.homeLocation}} method="GET">
+		<a id="home" class="link" href={{navagate.homeLocation}}>{{navagate.whereHome}}</a>
+	</form>		
+	<form class="formLink" action={{navagate.lunchLocation}} method="GET">
+		<a id="lunch" class="link" href={{navagate.lunchLocation}}>{{navagate.whereLunch}}</a>
+	</form>			
+	<form class="formLink" action={{navagate.loginLocation}} method="GET">
+		<a id="login" class="link" href={{navagate.loginLocation}}>{{navagate.whereLogin}}</a>
+	</form>			
+</header>
 
-<div class="container">
-	<div class="test">This is the Bakery Page</div>
+<div class="container-fluid">
+	<div class="row">
+		<div class="menuTitle">Choose from these hand made delicacies made from the finest ingredients.</div>
+	</div>
+	<div class="row">
+		{{#each bakery}}
+			<ul>
+				<li>
+					<div class="row">
+						<div class="col-3">
+							<img class="img" src={{bakePic}} alt="Bakery" style="height:auto; width:100%;"/>
+						</div>
+						<div class="col-7">					
+							<div class="bakery">
+								<p class="bakeryName">{{name}}</p>
+								<p class="bakeryDescribe">{{description}}</p>
+							</div>
+						</div>
+						<div class="col-2">
+							<div class="cost">${{cost}}</div>
+							<div class="qty">Quantity</div>
+							<form>
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="QTY">
+								</div>
+							</form>
+						</div>
+					</div>
+				</li>
+			</ul>
+		{{/each}}
+	</div>
 </div>
-
