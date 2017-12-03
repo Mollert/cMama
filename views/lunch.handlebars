@@ -16,66 +16,58 @@
 	<div class="row">
 		<div class="menuTitle">Choose from these hand made sandwiches with the finest ingredients.</div>
 	</div>
+	<form action="/lunchData" method="POST">
 	<div class="row">
-		<div class="col-10">
-			{{#each sandwich}}
-				<ul>
-					<li>
-						<div class="row">
-							<div class="col-3">
-								<img class="img-left" src={{sandPic}} alt="Sandwich" style="height:auto; width:100%;"/>
-							</div>
-							<div class="col-7">					
-								<div class="sandwich">
-									<p class="sandwichName">{{name}}</p>
-									<p class="sandwichDescribe">{{description}}</p>
-									<p>{{emphasis}}</p>
-								</div>
-							</div>
-							<div class="col-2">
-								<div class="cost">${{cost}}</div>
-								<div class="qty">Quantity</div>
-								<form>
-									<div class="form-group">
-										<input type="text" class="form-control" placeholder="QTY">
-									</div>
-								</form>
+		{{#each sandwich}}
+			<ul>
+				<li>
+					<div class="row">
+						<div class="col-3">
+							<img class="img" src={{sandPic}} alt="Sandwich" style="height:auto; width:100%;"/>
+						</div>
+						<div class="col-7">					
+							<div class="sandwich">
+								<p class="sandwichName">{{name}}</p>
+								<p class="sandwichDescribe">{{description}}</p>
+								<p>{{emphasis}}</p>
 							</div>
 						</div>
-					</li>
-				</ul>
-			{{/each}}
-		</div>		
-		<div class="col-2">
-			{{#each side}}
-				<ul>
-					<li>
-						<img class="img-left" src={{sidePic}} style="height:auto; width:60%;"/>
-						<div class="sideName">{{name}}</div>
-						<div class="cost">${{cost}}</div>
-						<form>
-							<div class="form-group">
-								<input type="text" class="form-control" placeholder="QTY">
-							</div>
-						</form>
-					</li>				
-				</ul>
-			{{/each}}
-			{{#each drink}}
-				<ul>
-					<li>
-						<img class="img-left" src={{drinkPic}} style="height:auto; width:60%;"/>
-						<div class="sideName">{{name}}</div>
-						<div class="cost">${{cost}}</div>
-						<form>
-							<div class="form-group">
-								<input type="text" class="form-control" placeholder="QTY">
-							</div>
-						</form>
-					</li>				
-				</ul>
-			{{/each}}			
-		</div>
+						<div class="col-2">
+							<div class="cost">${{cost}}</div>
+							<div class="qty">Quantity</div>
+							<input type="text" name={{identifier}} class="form-control" placeholder="0">
+						</div>
+					</div>
+				</li>
+			</ul>
+		{{/each}}
 	</div>
+	<div class="row">
+		{{#each side}}
+			<ul class="horizontal">
+				<li>
+					<img class="img" src={{sidePic}} alt="Side" style="height:auto; width:120px;"/>
+					<div class="sideName">{{name}}</div>
+					<div class="cost">${{cost}}</div>
+					<div class="qty">Quantity</div>
+					<input type="text" name={{identifier}} class="form-control" placeholder="0">
+				</li>				
+			</ul>
+		{{/each}}
+	</div>
+	<div class="row">
+		{{#each drink}}
+			<ul class="horizontal">
+				<li>
+					<img class="img" src={{drinkPic}} alt="Drink" style="height:auto; width:120px;"/>
+					<div class="sideName">{{name}}</div>
+					<div class="cost">${{cost}}</div>
+					<div class="qty">Quantity</div>
+					<input type="text" name={{identifier}} class="form-control" placeholder="0">
+				</li>				
+			</ul>
+		{{/each}}
+	</div>
+	<button type="submit" class="btn btn-primary">Go to cart</button>								
+	</form>	
 </div>
-

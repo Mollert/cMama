@@ -23,6 +23,12 @@ app.set("views", path.join(__dirname ,"views"));
 var routes = require("./controllers/cMama-controller.js");
 
 app.use("/", routes);
+app.use("/bakery", routes);
+app.use("/lunch", routes);
+app.use("/login", routes);
+app.use("/bakeryData", routes);
+app.use("/lunchData", routes);
+
 
 app.listen(port, function() {
   console.log("Listening closely on port " + port);

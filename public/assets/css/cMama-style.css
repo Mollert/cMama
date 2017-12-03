@@ -32,9 +32,13 @@
 /* Lunch Page */
 ul {
 	list-style: none;
-	padding-left: 0px;
+
 }
 
+.horizontal {
+	text-align: center;
+	margin: 0 auto;
+}
 /* Login Page */		
 .login {
 	background-color: #DEB887;	

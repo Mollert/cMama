@@ -17,31 +17,30 @@
 		<div class="menuTitle">Choose from these hand made delicacies made from the finest ingredients.</div>
 	</div>
 	<div class="row">
-		{{#each bakery}}
-			<ul>
-				<li>
-					<div class="row">
-						<div class="col-3">
-							<img class="img" src={{bakePic}} alt="Bakery" style="height:auto; width:100%;"/>
-						</div>
-						<div class="col-7">					
-							<div class="bakery">
-								<p class="bakeryName">{{name}}</p>
-								<p class="bakeryDescribe">{{description}}</p>
+		<form action="/bakeryData" method="POST">
+			{{#each bakery}}
+				<ul>
+					<li>
+						<div class="row">
+							<div class="col-3">
+								<img class="img" src={{bakePic}} alt="Bakery" style="height:auto; width:100%;"/>
+							</div>
+							<div class="col-7">					
+								<div class="bakery">
+									<p class="bakeryName">{{name}}</p>
+									<p class="bakeryDescribe">{{description}}</p>
+								</div>
+							</div>
+							<div class="col-2">
+								<div class="cost">${{cost}}</div>
+								<div class="qty">Quantity</div>
+								<input type="text" name={{identifier}} class="form-control" placeholder="0">
 							</div>
 						</div>
-						<div class="col-2">
-							<div class="cost">${{cost}}</div>
-							<div class="qty">Quantity</div>
-							<form>
-								<div class="form-group">
-									<input type="text" class="form-control" placeholder="QTY">
-								</div>
-							</form>
-						</div>
-					</div>
-				</li>
-			</ul>
-		{{/each}}
+					</li>
+				</ul>
+			{{/each}}
+			<button type="submit" class="btn btn-primary">Go to cart</button>								
+		</form>	
 	</div>
 </div>

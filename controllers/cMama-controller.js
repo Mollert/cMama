@@ -29,4 +29,21 @@ router.get("/login", function(req, res) {
   res.render("login", {navagate});
 });
 
+// Get Bakery Products
+router.post("/bakeryData", function(req, res) {
+		var bakeryData = req.body;
+		console.log(bakeryData);
+
+	res.render("bakery", {navagate, bakery});
+});
+
+// Get Lunch Menu
+router.post("/lunchData", function(req, res) {
+		var lunchData = req.body;
+		console.log(lunchData);
+
+	res.render("lunch", {navagate, sandwich, side, drink});
+});
+
+
 module.exports = router;
