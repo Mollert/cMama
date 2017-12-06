@@ -20,15 +20,11 @@ app.engine("handlebars", exphbs({defaultLayout: "main"}));
 app.set("view engine", "handlebars");
 app.set("views", path.join(__dirname ,"views"));
 
-var routes = require("./controllers/cMama-controller.js");
+var routes = require("./controllers/mainRoutes.js");
+var selections = require("./controllers/selections.js");
 
 app.use("/", routes);
-app.use("/bakery", routes);
-app.use("/lunch", routes);
-app.use("/login", routes);
-app.use("/bakeryData", routes);
-app.use("/lunchData", routes);
-
+app.use("/selections", selections);
 
 app.listen(port, function() {
   console.log("Listening closely on port " + port);
