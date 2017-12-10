@@ -1,8 +1,13 @@
 
-/* Header  */
+/* Home */
+.home {
+	background-color: #DEB887;
+}
+
+/* Header */
 .head {
 	padding: 50px 0 10px 0;
-	background-image: url("../../assets/image/bakeryBanner.png");
+	background-image: url("../../image/bakeryBanner.png");
 	background-repeat: no-repeat;
 	background-size: cover;
 }
