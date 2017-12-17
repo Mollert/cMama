@@ -1,0 +1,23 @@
+
+/* Login Page */		
+.login {
+	background-color: #DEB887;	
+	font-size: 24px;
+	font-weight: bold;
+	padding: 20px 100px 20px 60px;
+}
+		
+.loginTitle {
+	text-decoration: underline;
+	margin-top: 0px;
+	margin-bottom: 20px;
+}
+		
+.btn {
+	margin-bottom: 20px;
+}
+
+
+/* Receipt Page */
+
+

@@ -19,9 +19,9 @@ var side = [
 		"cost": "1.25"
 	},
 	{
-		"name": "Cookie",
+		"name": "Chocolate Chip Cookie",
 		"identifier": "cookieCC",
-		"sidePic": "/image/menu/side-cookie.png",
+		"sidePic": "/image/menu/side-cookieCC.png",
 		"cost": "2.10"
 	}
 ];

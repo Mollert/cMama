@@ -4,6 +4,17 @@
 	background-color: #DEB887;
 }
 
+.home p {
+	font-size: 16px;
+	text-align: center;
+	color: brown;
+	margin-bottom: 2px;
+}
+
+#map { 
+   border: 6px solid brown;
+}
+
 /* Header */
 .head {
 	padding: 50px 0 10px 0;
@@ -34,30 +45,3 @@
 	color: red;
 }
 
-/* Lunch Page */
-ul {
-	list-style: none;
-
-}
-
-.horizontal {
-	text-align: center;
-	margin: 0 auto;
-}
-/* Login Page */		
-.login {
-	background-color: #DEB887;	
-	font-size: 24px;
-	font-weight: bold;
-	padding: 20px 100px 20px 60px;
-}
-		
-.loginTitle {
-	text-decoration: underline;
-	margin-top: 0px;
-	margin-bottom: 20px;
-}
-		
-.btn {
-	margin-bottom: 20px;
-}

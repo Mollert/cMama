@@ -14,19 +14,24 @@
 
 <div class="login">
 	<div class="loginTitle">LOG IN</div>
-	<form>
+	<form action="/login/in" method="POST">
 		<div class="form-group">
-			<label for="exampleInputEmail1">Email address</label>
-			<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email">
+			<label for="emailLocation">Login with your Email address</label>
+			<input type="email" class="form-control" name="emailEntry" placeholder="Enter your email here">
 			<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
 		</div>
 		<div class="form-group">
-			<label for="exampleInputPassword1">Password</label>
-			<input type="password" class="form-control" id="exampleInputPassword1" placeholder="How about a Password">
+			<label for="passwordLocation">Enter your Password</label>
+			<input type="password" class="form-control" name="passwordEntry" placeholder="How about a Password">
 		 </div>
 		 <button type="submit" class="btn btn-primary">Log In</button>
 		 <button type="submit" class="btn btn-primary">Reset</button>		 
 	</form>
+	{{{ message }}}
+<!--	<div class="alert alert-info" role="alert">
+		<img src="/image/question.png" alt="The Question" width="60px" height="60px">
+		<strong>It doesn't look like you've logged in yet.<br>What are you waiting for?</strong>
+	</div>	
 	<div class="alert alert-success" role="alert">
 		<img src="/image/good.png" alt="The Good" width="60px" height="60px">
 		<strong>You're in!<br>Hope you're hungry.</strong>
@@ -35,6 +40,7 @@
 		<img src="/image/bad.png" alt="The Bad" width="60px" height="60px">
 		<strong>Oh snap!<br>Something went wrong.  Please reset and try again.</strong>
 	</div>
+-->
 </div>
 
 

@@ -14,57 +14,47 @@
 
 <div class="container-fluid">
 	<div class="row">
-		<div class="receiptTitle">Here is a itemized reciept of your selections so far.</div>
-	</div>
-	<div class="row">	
-		<div class="col-1"></div>
-		<div class="col-2">Quantity</div>
-		<div class="col-5">Description</div>
-		<div class="col-3">Price</div>
-		<div class="col-1"></div>
+		<div class="receiptTitle">Here is a itemized receipt of your {{which.title}} selections.</div>
 	</div>
 	<div class="row">
-		<form action="/receiptData" method="GET">
-			{{#each receipt}}
-				<ul>
-					<li>
-						<div class="row">
-							<div class="col-1"></div>
-							<div class="col-2">
-								<p class="itemQuantity">{{quantity}}</p>
-							</div>
-							<div class="col-5">					
-								<p class="itemDescription">{{name}}</p>
-							</div>
-							<div class="col-3">
-								<p class="itemPrice">${{price}}</p>
-							</div>
-							<div class="col-1"></div>
-						</div>
-					</li>
-				</ul>
-			{{/each}}
-		<div class="row">
-			<div class="col-1"></div>
-			<div class="col-2"></div>
-			<div class="col-5">
-				<p class="taxDescription">Sales Tax</p>
-			</div>
-			<div class="col-3">
-				<p class="salesTax">${{tax}}</p>
-			<div class="col-1"></div>
+		<div class="col-2"></div>
+		<div class="col-8">	
+			<table class="receiptTable">
+				<tr>
+					<th><p class="quantity">Quantity</p></th>
+					<th><p class="description">Description</p></th>
+					<th><p class="price">Price</p></th>
+				</tr>
+					{{#each receipt}}			
+						<tr>
+							<td><p class="itemQuantity">{{quantity}}</p></td>				
+							<td><p class="itemName">{{name}}
+								{{#if multi}}
+									<span> (@ ${{cost}} each)<span>
+								{{/if}}</p></td>
+							<td><p class="itemPrice">${{price}}</p></td>
+						</tr>
+					{{/each}}
+				<tr>
+					<td><p class="subTotal"></p></td>
+					<td><p class="salesTax">Total: </p></td>
+					<td><p class="grandTotal">${{allTotals.total}}</p></td>
+				</tr>
+				<tr>
+					<td><p class="subTotal"></p></td>
+					<td><p class="salesTax">Sales Tax: </p></td>
+					<td><p class="grandTotal">${{allTotals.tax}}</p></td>
+				</tr>
+				<tr>
+					<td><p class="subTotal"></p></td>
+					<td><p class="salesTax">Grand Total: </p></td>
+					<td><p class="grandTotal">${{allTotals.grandTotal}}</p></td>
+				</tr>
+			</table>
 		</div>
-		<div class="row">
-			<div class="col-1"></div>
-			<div class="col-2"></div>
-			<div class="col-5">
-				<p class="totalAmount">Total Amount:</p>
-			</div>
-			<div class="col-3">
-				<p class="total">${{total}}</p>
-			<div class="col-1"></div>
-		</div>						
-			<button type="submit" class="btn btn-primary">Go to cart</button>								
-		</form>
+		<div class="col-2"></div>
 	</div>
+	<div class="row">			
+		<button type="submit" class="btn btn-primary">Go to cart</button>
+	</div>								
 </div>

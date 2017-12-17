@@ -21,7 +21,7 @@ app.set("view engine", "handlebars");
 app.set("views", path.join(__dirname ,"views"));
 
 var routes = require("./controllers/mainRoutes.js");
-var selections = require("./controllers/selections.js");
+var selections = require("./controllers/selectionRoutes.js");
 
 app.use("/", routes);
 app.use("/selections", selections);
