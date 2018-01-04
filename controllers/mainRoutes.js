@@ -27,8 +27,18 @@ router.get("/lunch", function(req, res) {
 
 // To login page
 router.get("/login", function(req, res) {
-  res.render("login", {navagate});
+  res.render("login", {navagate,
+		helpers: {message: function () {
+			return '<div class="alert alert-info" role="alert"><img src="/image/question.png" alt="The Question" width="80px" height="80px"><br><strong>It doesn\'t look like you\'ve logged in yet.<br>What are you waiting for?</strong></div>';
+			}
+		}
+	});
 });
+
+
+
+
+
 
 // Login
 router.post("/login/in", function(req, res) {
