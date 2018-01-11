@@ -134,7 +134,6 @@ router.post("/lunchData", function(req, res) {
 	allTotals = addingItUp(total);
 //	console.log(receipt);
 //	console.log(allTotals);
-
 	res.render("receipt", {navagate, which, receipt, allTotals});
 });
 

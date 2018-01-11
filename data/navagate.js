@@ -8,7 +8,9 @@ var navagate =
 		"lunchLocation": "/lunch",
 		"whereLunch": "Lunch Menu",
 		"loginLocation": "/login",
-		"whereLogin": "Login"		
+		"whereLogin": "Login",
+		"logoutLocation": "/loggedin/logout",
+		"whereLogout": "Logout"					
 	}
 ;
 

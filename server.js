@@ -22,9 +22,11 @@ app.set("views", path.join(__dirname ,"views"));
 
 var routes = require("./controllers/mainRoutes.js");
 var selections = require("./controllers/selectionRoutes.js");
+var loggedin = require("./controllers/loggedinRoutes.js");
 
 app.use("/", routes);
 app.use("/selections", selections);
+app.use("/loggedin", loggedin);
 
 app.listen(port, function() {
   console.log("Listening closely on port " + port);

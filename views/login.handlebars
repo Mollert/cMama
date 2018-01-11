@@ -13,10 +13,10 @@
 </header>
 
 <div class="login">
-	<div class="loginTitle">LOG IN</div>
-	<form action="/login/in" method="POST">
+	<div class="loginTitle">Create an account or log into your own account</div>
+	<form action="/loggedin/login" method="POST">
 		<div class="form-group">
-			<label for="emailLocation">Login with your Email address</label>
+			<label for="emailLocation">Enter your Email address</label>
 			<input type="email" class="form-control" name="emailEntry" placeholder="Enter your email here">
 			<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
 		</div>
@@ -26,25 +26,11 @@
 			<small id="passwordHelp" class="form-text text-muted">A minimum five characters with at least one letter and one number.</small>			
 		 </div>
 		 <button type="submit" class="btn btn-primary">Log In</button>
-		 <button type="submit" class="btn btn-primary">Reset</button>		 
+		 <button type="submit" class="btn btn-primary" formaction="/loggedin/createAccount">Create an Account</button>
 	</form>
 
 	{{{message}}}
 
-
-<!--	<div class="alert alert-info" role="alert">
-		<img src="/image/question.png" alt="The Question" width="60px" height="60px">
-		<strong>It doesn't look like you've logged in yet.<br>What are you waiting for?</strong>
-	</div>	
-	<div class="alert alert-success" role="alert">
-		<img src="/image/good.png" alt="The Good" width="60px" height="60px">
-		<strong>You're in!<br>Hope you're hungry.</strong>
-	</div>
-	<div class="alert alert-danger" role="alert">
-		<img src="/image/bad.png" alt="The Bad" width="60px" height="60px">
-		<strong>Oh snap!<br>Something went wrong.  Please reset and try again.</strong>
-	</div>
--->
 </div>
 
 
