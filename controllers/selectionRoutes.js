@@ -5,6 +5,7 @@ var router = express.Router();
 
 var bakery = require("../data/bakery.js");
 var drink = require("../data/drink.js");
+var logging = require("../data/logging.js");
 var navagate = require("../data/navagate.js");
 var sandwich = require("../data/sandwich.js");
 var side = require("../data/side.js");
@@ -79,7 +80,7 @@ router.post("/bakeryData", function(req, res) {
 	allTotals = addingItUp(total);
 //	console.log(receipt);
 //	console.log(allTotals);
-	res.render("receipt", {navagate, which, receipt, allTotals});
+	res.render("receipt", {navagate, logging, which, receipt, allTotals});
 });
 
 // Get Lunch Menu
@@ -134,7 +135,7 @@ router.post("/lunchData", function(req, res) {
 	allTotals = addingItUp(total);
 //	console.log(receipt);
 //	console.log(allTotals);
-	res.render("receipt", {navagate, which, receipt, allTotals});
+	res.render("receipt", {navagate, logging, which, receipt, allTotals});
 });
 
 module.exports = router;

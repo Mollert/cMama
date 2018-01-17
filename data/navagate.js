@@ -6,11 +6,7 @@ var navagate =
 		"bakeryLocation": "/bakery",
 		"whereBakery": "Bakery Items",
 		"lunchLocation": "/lunch",
-		"whereLunch": "Lunch Menu",
-		"loginLocation": "/login",
-		"whereLogin": "Login",
-		"logoutLocation": "/loggedin/logout",
-		"whereLogout": "Logout"					
+		"whereLunch": "Lunch Menu"				
 	}
 ;
 
