@@ -4,7 +4,6 @@ var request = require('request');
 var router = express.Router();
 
 var customers = require("../data/customers.js");
-var logging = require("../data/logging.js");
 var navagate = require("../data/navagate.js");
 
 function isCustomer(checkEmail) {
@@ -13,7 +12,6 @@ function isCustomer(checkEmail) {
 			return true;
 		}
 	}
-	console.log("No email match");
 }
 
 function isPassword(checkEmail, checkPassword) {
@@ -44,8 +42,6 @@ router.post("/createAccount", function(req, res) {
 	var alertTypeNew = "'alert alert-success'";
 	var validationImageNew = "/image/good.png";
 	var addMessageNew = "You\'re in!<br>Hope you\'re hungry.";
-
-	console.log(anyerror);
 
 	if ( anyerror instanceof Array ) {
 		if ( anyerror[0].param === "emailEntry" ) {
@@ -90,24 +86,20 @@ router.post("/createAccount", function(req, res) {
 		alertTypeNew = "'alert alert-danger'";		
 		validationImageNew = "/image/bad.png";	
 		addMessageNew = 'The email you entered "' + newEmail + '" is incorrect.';
-		console.log('The email you entered "' + newEmail + '" is incorrect');
 	}
 
 	if ( alreadyCustomer ) {
 		validationImageNew = "/image/exclamation.png";	
-		addMessageNew = newEmail + " you\'ve tried to create a new account.<br>But you already have an account, so this time click the login button.";		
-		console.log("You are already a customer");
+		addMessageNew = newEmail + " you\'ve tried to create a new account.<br>But you already have an account, so this time click the login button.";
 	}
 	
 	if (errorPassword ) {
 		alertTypeNew = "'alert alert-danger'";		
 		validationImageNew = "/image/bad.png";		
-		console.log(addMessageNew);
 	}
 
 	if ( !errorEmail && !errorPassword && !alreadyCustomer ) {
 		customers.push({email:newEmail, password:newPassword});
-		console.log(customers);
 	}
 
 	res.render("login", {navagate, 
@@ -117,7 +109,6 @@ router.post("/createAccount", function(req, res) {
 		}
 	});	
 });
-
 
 // Login
 router.post("/login", function(req, res) {
@@ -145,7 +136,6 @@ router.post("/login", function(req, res) {
 		}
 	});
 });
-
 
 // To logout page
 router.get("/logout", function(req, res) {			

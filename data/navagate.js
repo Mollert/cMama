@@ -1,12 +1,16 @@
 
-var navagate = 
+var navagate =
 	{
 		"homeLocation": "/",
 		"whereHome": "Home",
 		"bakeryLocation": "/bakery",
 		"whereBakery": "Bakery Items",
 		"lunchLocation": "/lunch",
-		"whereLunch": "Lunch Menu"				
+		"whereLunch": "Lunch Menu",
+		"logLocation": "/login",
+		"whereLog": "Login/Logout",
+		"logoutLocation": "/loggedin/logout",
+		"whereLogout": "Logout"
 	}
 ;
 

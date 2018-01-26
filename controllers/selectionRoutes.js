@@ -5,7 +5,6 @@ var router = express.Router();
 
 var bakery = require("../data/bakery.js");
 var drink = require("../data/drink.js");
-var logging = require("../data/logging.js");
 var navagate = require("../data/navagate.js");
 var sandwich = require("../data/sandwich.js");
 var side = require("../data/side.js");
@@ -57,9 +56,7 @@ function addingItUp(tot) {
 // Get Bakery Products
 router.post("/bakeryData", function(req, res) {
 	var bakeryData = req.body;
-//	console.log(bakeryData);
 	var orderBakery = selection(bakeryData);
-//	console.log(orderBakery);
 	
 	which = {title: "bakery"};
 
@@ -78,18 +75,14 @@ router.post("/bakeryData", function(req, res) {
 		}
 	}
 	allTotals = addingItUp(total);
-//	console.log(receipt);
-//	console.log(allTotals);
-	res.render("receipt", {navagate, logging, which, receipt, allTotals});
+	res.render("receipt", {navagate, which, receipt, allTotals});
 });
 
 // Get Lunch Menu
 router.post("/lunchData", function(req, res) {
 	var lunchData = req.body;
-//	console.log(lunchData);
 
 	var orderLunch = selection(lunchData);
-//	console.log(orderLunch);
 	
 	which = {title: "lunch"};
 
@@ -133,9 +126,7 @@ router.post("/lunchData", function(req, res) {
 	}
 
 	allTotals = addingItUp(total);
-//	console.log(receipt);
-//	console.log(allTotals);
-	res.render("receipt", {navagate, logging, which, receipt, allTotals});
+	res.render("receipt", {navagate, which, receipt, allTotals});
 });
 
 module.exports = router;

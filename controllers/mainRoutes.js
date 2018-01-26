@@ -5,7 +5,6 @@ var router = express.Router();
 
 var bakery = require("../data/bakery.js");
 var customers = require("../data/customers.js");
-var logging = require("../data/logging.js");
 var navagate = require("../data/navagate.js");
 var drink = require("../data/drink.js");
 var sandwich = require("../data/sandwich.js");
@@ -13,17 +12,17 @@ var side = require("../data/side.js");
 
 // To home page
 router.get("/", function(req, res) {
-	res.render("index", {navagate, logging});
+	res.render("index", {navagate});
 });
 
 // To bakery page
 router.get("/bakery", function(req, res) {
-	res.render("bakery", {navagate, logging, bakery});
+	res.render("bakery", {navagate, bakery});
 });
 
 // To lunch page
 router.get("/lunch", function(req, res) {
-	res.render("lunch", {navagate, logging, sandwich, side, drink});
+	res.render("lunch", {navagate, sandwich, side, drink});
 });
 
 // To login page
